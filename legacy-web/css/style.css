@@ -1,0 +1,305 @@
+/* alinear propiedades no significa reducir css. el objetivo es reducior empleando proppiedades y clases de bootstrap */
+.redMars {
+    color: #e16a15;
+}
+
+.hero-video {
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-overlay {
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.stage-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.navbar {
+    transition: transform 0.3s ease-in-out;
+}
+
+nav.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+.hover-card {
+    transition: transform .30s cubic-bezier(.2, .8, .2, 1), box-shadow .30s ease;
+    cursor: pointer;
+    will-change: transform, box-shadow;
+    transform-origin: center center;
+}
+
+.hover-card:focus,
+.hover-card:hover {
+
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .35);
+    outline: none;
+}
+
+.hover-card .card-img-top {
+
+    transition: opacity .30s ease;
+    transform: none;
+}
+
+.hover-card:focus .card-img-top,
+.hover-card:hover .card-img-top {
+    opacity: 0.95;
+}
+
+.hover-card:hover .hover-reveal,
+.hover-card:focus .hover-reveal {
+    max-height: 300px;
+    opacity: .85;
+    transition: max-height .30s ease, opacity .30s ease;
+}
+
+.content-pair {
+    padding: 3rem 0;
+    margin: 1.25rem 0;
+}
+
+.content-pair .content-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.content-pair .content-text h2 {
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 991.98px) {
+    .content-pair {
+        padding: 2rem 0;
+    }
+
+    .content-pair .content-img {
+        height: 220px;
+    }
+}
+
+.space {
+    color: #1ed3f8;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 17%;
+
+    animation: typing 2s steps(12),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.fadeBlur {
+    animation: fadeBlur 1.2s ease-out both;
+}
+
+@keyframes fadeBlur {
+    from {
+        opacity: 0;
+        filter: blur(12px);
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+
+
+.typing-effect {
+    display: block;
+    font-family: monospace;
+    border-right: 3px solid currentColor;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30) forwards, blink 0.7s step-end infinite;
+    width: fit-content;
+}
+
+.typing-fast {
+    animation: typing 2s steps(20) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        max-width: 0;
+    }
+
+    to {
+        max-width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+}
+
+
+.fade-in-title {
+    display: block;
+    animation: fadeInUp 1.2s ease-out both;
+    border: none !important;
+    font-family: inherit !important;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#galleryCarousel .carousel-inner {
+    height: 70vh;
+    min-height: 400px;
+    max-height: 700px;
+    background-color: #000;
+}
+
+#galleryCarousel .carousel-item {
+    height: 100%;
+}
+
+#galleryCarousel .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 767.98px) {
+    #galleryCarousel .carousel-inner {
+        height: 60vh;
+        min-height: 350px;
+    }
+
+    #galleryCarousel .carousel-item img {
+        object-fit: contain;
+    }
+}
+
+#galleryCarousel .carousel-inner {
+    border: 2px solid rgba(13, 110, 253, 0.5);
+    box-shadow: 0 0 30px rgba(13, 110, 253, 0.3), 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+#galleryCarousel .carousel-inner:hover {
+    border-color: rgba(13, 110, 253, 0.7);
+    box-shadow: 0 0 40px rgba(13, 110, 253, 0.5), 0 12px 40px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .accordion-button {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+
+.typing-effect-once {
+    display: inline-block;
+    font-family: inherit;
+    border-right: 3px solid currentColor;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30) forwards, blink 0.7s step-end 4, hideCursor 0s 2.5s forwards;
+    width: fit-content;
+}
+
+@keyframes typing {
+    from {
+        max-width: 0;
+    }
+
+    to {
+        max-width: 100%;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        border-color: currentColor;
+    }
+
+    51%,
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes hideCursor {
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    .typing-effect-once {
+        white-space: normal !important;
+        border-right: none !important;
+        animation: none !important;
+        max-width: 100% !important;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .display-4,
+    .display-5 {
+        font-size: 2rem !important;
+    }
+
+    .lead {
+        font-size: 1.1rem !important;
+    }
+
+    .fs-5 {
+        font-size: 1rem !important;
+    }
+}
+
+.fade-in-title {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
