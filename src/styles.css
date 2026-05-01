@@ -226,3 +226,17 @@
 body {
     padding-top: 70px; /* Adjust based on navbar height */
 }
+
+/* Elimina el espacio verde (padding) del body y html */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* A veces el contenedor que genera Angular (<app-root>)
+   o el router-outlet añaden espacios */
+app-root {
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+}
