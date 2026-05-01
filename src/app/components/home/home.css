@@ -1,0 +1,96 @@
+.hero-section {
+  position: relative;
+  background: #000;
+}
+
+.hero-video {
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.typing-effect-once {
+  display: inline-block;
+  font-family: inherit;
+  border-right: 3px solid currentColor;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30) forwards, blink 0.7s step-end 4, hideCursor 0s 2.5s forwards;
+  width: fit-content;
+}
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    border-color: currentColor;
+  }
+  51%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes hideCursor {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-effect-once {
+    white-space: normal !important;
+    border-right: none !important;
+    animation: none !important;
+    max-width: 100% !important;
+    word-wrap: break-word;
+  }
+
+  .display-1 {
+    font-size: 3rem !important;
+  }
+
+  .display-2 {
+    font-size: 2.5rem !important;
+  }
+}
+
+.redMars {
+  color: #e16a15;
+}
+
+.hover-card {
+  transition: transform .30s cubic-bezier(.2, .8, .2, 1), box-shadow .30s ease;
+  cursor: pointer;
+  will-change: transform, box-shadow;
+  transform-origin: center center;
+}
+
+.hover-card:focus,
+.hover-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .35);
+  outline: none;
+}
+
+.hover-card .card-img-top {
+  transition: opacity .30s ease;
+  transform: none;
+}
+
+.hover-card:focus .card-img-top,
+.hover-card:hover .card-img-top {
+  opacity: 0.95;
+}

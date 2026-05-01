@@ -1,1 +1,132 @@
-<p>home works!</p>
+<!-- Hero Section -->
+<section id="home"
+  class="hero-section mt-5 min-vh-100 d-flex align-items-center justify-content-center text-white position-relative overflow-hidden">
+  <video autoplay muted loop playsinline class="hero-video position-absolute top-0 start-0 w-100 h-100">
+    <source src="/img/111528-690743564_medium.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark"></div>
+
+  <div class="container text-center position-relative z-1 px-4">
+    <div class="d-flex justify-content-center mb-2">
+      <p class="text-uppercase opacity-75 small typing-effect-once">SPACE JOURNEY</p>
+    </div>
+
+    <div class="d-flex justify-content-center mb-4">
+      <h1 class="display-1 fw-bold typing-effect-once">JOURNEY BEYOND EARTH</h1>
+    </div>
+
+    <div class="d-flex justify-content-center mb-3">
+      <h2 class="display-2 fw-light typing-effect-once">Earth to Moon</h2>
+    </div>
+
+    <div class="d-flex justify-content-center mb-4">
+      <p class="text-uppercase opacity-75 typing-effect-once">SPACE TRAVEL</p>
+    </div>
+
+    <p class="lead mx-auto mb-5" style="max-width: 800px;">
+      Explore the extraordinary journey from Earth's exosphere to the lunar surface.
+      Discover the science, the technology, and the wonder of space travel.
+    </p>
+
+    <button (click)="scrollToStages()" class="btn btn-outline-light btn-lg px-5 py-3 text-uppercase fw-semibold">EXPLORE</button>
+  </div>
+</section>
+
+<!-- Stages Section -->
+<section id="stages" class="py-5 bg-dark text-white">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <p class="text-uppercase mb-2 opacity-75 small">FROM EXOSPHERE TO MOON</p>
+      <h2 class="h3 fw-light mb-3">Modern journeys beyond Earth—educational, bold, and inspiring.</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <a (click)="navigateToStages('exosphere')" class="text-decoration-none" style="cursor: pointer;">
+          <div class="card hover-card bg-black text-white border-0 h-100 shadow-sm">
+            <div class="ratio ratio-16x9">
+              <img src="/img/exosfera.png" class="card-img-top object-fit-cover" alt="Exosphere lift">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="card-title fw-semibold mb-3">Exosphere lift.</h5>
+              <p class="card-text opacity-75">
+                The journey begins by leaving Earth through the exosphere - the gateway to space.
+                All stages are clearly explained.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a (click)="navigateToStages('orbital')" class="text-decoration-none" style="cursor: pointer;">
+          <div class="card hover-card bg-black text-white border-0 h-100 shadow-sm">
+            <div class="ratio ratio-16x9">
+              <img src="/img/orbital_cruise.png" class="card-img-top object-fit-cover" alt="Orbital cruise">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="card-title fw-semibold mb-3">Orbital cruise.</h5>
+              <p class="card-text opacity-75">
+                Stabilizing in low-Earth orbit, circling the planet at thrilling speeds. Experience
+                is always in full view.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a (click)="navigateToStages('lunar')" class="text-decoration-none" style="cursor: pointer;">
+          <div class="card hover-card bg-black text-white border-0 h-100 shadow-sm">
+            <div class="ratio ratio-16x9">
+              <img src="/img/lunar_arrival.png" class="card-img-top object-fit-cover" alt="Lunar arrival">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="card-title fw-semibold mb-3">Lunar arrival.</h5>
+              <p class="card-text opacity-75">
+                Travelling through space to the Moon - landing and exploring its mysteries. All
+                details fit any screen.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-secondary w-50 rounded-circle mx-auto">
+</section>
+
+<!-- Mars Section -->
+<section id="mars" class="py-2 bg-dark text-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-1 fw-light mb-3">Discover Mars—the next frontier in space exploration.</h2>
+      <p class="text-uppercase mb-2 opacity-75 h4">THE <span class="display-7 fw-bold redMars">RED</span> PLANET</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-8 mx-auto">
+        <a (click)="navigateToMars()" class="text-decoration-none" style="cursor: pointer;">
+          <div class="card hover-card bg-black text-white border-0 h-100 shadow-sm">
+            <div class="ratio ratio-16x9">
+              <img src="/img/marte.png" class="card-img-top object-fit-cover" alt="Mars exploration">
+            </div>
+            <div class="card-body p-4">
+              <h5 class="card-title fw-semibold mb-3">Explore Mars (WIP)</h5>
+              <p class="card-text opacity-75">
+                Mars, Earth's neighboring planet, has captured our imagination for centuries. From
+                rovers to upcoming crewed missions, humanity is preparing for the ultimate journey
+                to the Red Planet. Discover its unique geology, atmosphere, and the future
+                possibilities of human colonization.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="border-secondary">
+</section>

@@ -1,0 +1,43 @@
+.typing-effect {
+  display: block;
+  font-family: monospace;
+  border-right: 3px solid currentColor;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30) forwards, blink 0.7s step-end infinite;
+  width: fit-content;
+}
+
+.typing-fast {
+  animation: typing 2s steps(20) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .typing-effect {
+    white-space: normal !important;
+    border-right: none !important;
+    animation: none !important;
+    max-width: 100% !important;
+    word-wrap: break-word;
+  }
+}
