@@ -1,1 +1,98 @@
-<p>gallery works!</p>
+<!-- Seccion con imagen de fondo recuperada -->
+<section class="text-light py-5 mt-5 pt-4 position-relative"
+         [style.backgroundImage]="'url(/img/nova.png)'"
+         style="background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh;">
+
+  <!-- Capa de oscuridad (Overlay) para que el texto y el carrusel resalten -->
+  <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.75); pointer-events: none;"></div>
+
+  <div class="container fadeBlur position-relative" style="z-index: 2;">
+    <div class="row mb-5">
+      <div class="col-lg-12 text-center">
+        <div class="d-flex justify-content-center mb-4">
+          <h1 class="display-4 fw-bold fade-in-title">Space Gallery</h1>
+        </div>
+        <p class="lead fs-5 lh-lg">
+          Explore the visual journey across our cosmic destinations
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="galleryCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+          <!-- Indicadores (puntos inferiores) -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          </div>
+
+          <!-- Contenedor de las fotos -->
+          <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active">
+              <img src="/img/michiplaneta.png" class="d-block w-100 rounded" alt="Cat-head asteroid">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-bottom p-3">
+                <h5 class="fs-4 fw-semibold mb-2">Cat‑Head Asteroid</h5>
+                <p class="fs-6 mb-0">A rare near‑Earth asteroid with a striking cat‑head silhouette.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="/img/orbital_cruise.png" class="d-block w-100 rounded" alt="Orbital panorama">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-bottom p-3">
+                <h5 class="fs-4 fw-semibold mb-2">Orbital Panorama</h5>
+                <p class="fs-6 mb-0">Serene views of Earth's curvature during transit.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="/img/lunar_arrival.png" class="d-block w-100 rounded" alt="Lunar Landing">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-bottom p-3">
+                <h5 class="fs-4 fw-semibold mb-2">Lunar Arrival</h5>
+                <p class="fs-6 mb-0">Touchdown vistas across lunar mare.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="/img/nave_galaxia.png" class="d-block w-100 rounded" alt="Deep Space">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-bottom p-3">
+                <h5 class="fs-4 fw-semibold mb-2">Deep Space Voyager</h5>
+                <p class="fs-6 mb-0">A probe crossing starfields far beyond lunar orbit.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="/img/naveultrasonica.png" class="d-block w-100 rounded" alt="Stellar Nursery">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-bottom p-3">
+                <h5 class="fs-4 fw-semibold mb-2">Stellar Nursery</h5>
+                <p class="fs-6 mb-0">Colorful nebulae where new stars ignite.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="/img/marte y tierra.png" class="d-block w-100 rounded" alt="Mars and Earth">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-bottom p-3">
+                <h5 class="fs-4 fw-semibold mb-2">Mars & Earth</h5>
+                <p class="fs-6 mb-0">Contrasting worlds highlighting their unique atmospheres.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flechas de navegacion -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

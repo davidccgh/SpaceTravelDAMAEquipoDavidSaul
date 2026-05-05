@@ -1,0 +1,31 @@
+/* Altura del carrusel para que luzca profesional */
+.carousel-item img {
+  object-fit: cover;
+  height: 70vh;
+  min-height: 400px;
+}
+
+/* Ajustes para dispositivos moviles */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 50vh;
+    min-height: 300px;
+    /* En movil es mejor que se vea la imagen completa */
+    object-fit: contain;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .carousel-caption {
+    padding: 0.75rem !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem !important;
+    margin-bottom: 0;
+  }
+
+  .carousel-caption p {
+    display: none; /* Quitamos descripcion en movil para que no tape la foto */
+  }
+}
