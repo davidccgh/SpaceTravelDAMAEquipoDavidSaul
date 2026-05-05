@@ -1,1 +1,98 @@
-<p>contact works!</p>
+<section class="contact-hero d-flex align-items-center justify-content-center position-relative">
+  <div class="hero-overlay-dark"></div>
+
+  <main class="pt-5 mt-5 py-5 text-light position-relative" style="z-index:2; width: 100%;">
+    <div class="container py-4">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <div class="d-flex justify-content-center mb-2">
+            <p class="text-uppercase fs-4 text-info fw-semibold typing-effect-once">
+              Contact Mission Control
+            </p>
+          </div>
+          <h2 class="h1 fw-bold mb-3">Get in touch with Space Hawkings</h2>
+          <p class="text-light opacity-75">
+            Send us your questions about flights, research partnerships, or educational programs.
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="card bg-dark text-light border-secondary shadow">
+                <div class="card-body p-4 p-md-5">
+                  <form (submit)="$event.preventDefault()">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label">Full name</label>
+                        <input type="text" class="form-control bg-black text-light border-secondary" placeholder="Jane Doe" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control bg-black text-light border-secondary" placeholder="you@example.com" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label">Inquiry type</label>
+                        <select class="form-select bg-black text-light border-secondary" required>
+                          <option value="" selected disabled>Select an option</option>
+                          <option value="tourism">Space tourism</option>
+                          <option value="education">Education & schools</option>
+                          <option value="research">Scientific research</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label">Your message</label>
+                        <textarea class="form-control bg-black text-light border-secondary" rows="4" placeholder="Tell us about your mission idea..." required></textarea>
+                      </div>
+                      <div class="col-12 d-grid">
+                        <button type="submit" class="btn btn-info btn-lg fw-bold">
+                          <i class="bi bi-send me-2"></i>Send Message
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="card bg-dark text-light border-secondary mb-4">
+                <div class="card-body p-4">
+                  <h4 class="text-info mb-3"><i class="bi bi-stars me-2"></i>Why Register?</h4>
+                  <ul class="list-group list-group-flush bg-transparent">
+                    <li class="list-group-item bg-transparent text-light border-secondary small">
+                      <i class="bi bi-check-circle me-2 text-info"></i>Exclusive mission updates
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary small">
+                      <i class="bi bi-check-circle me-2 text-info"></i>Special events & webinars
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary small">
+                      <i class="bi bi-check-circle me-2 text-info"></i>Early notifications
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="accordion" id="faqContact">
+                <div class="accordion-item bg-dark">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                      Flight Duration?
+                    </button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqContact">
+                    <div class="accordion-body text-light opacity-75 small">
+                      Standard lunar missions last 10 to 14 days.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>

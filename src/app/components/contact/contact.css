@@ -1,0 +1,52 @@
+/* Configuración del fondo Hero */
+.contact-hero {
+  background-image: url('/img/astronauta.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Capa oscura para que el formulario resalte */
+.hero-overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Un poco más oscuro para mejor lectura */
+  z-index: 1;
+}
+
+/* Estilos para el formulario e inputs */
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Ajustes de Acordeón para modo oscuro */
+.accordion-item {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #1a1d20;
+  color: #0dcaf0;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.list-group-item {
+  font-size: 0.95rem;
+  padding: 0.75rem 0;
+}
