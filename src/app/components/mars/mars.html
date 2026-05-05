@@ -1,1 +1,56 @@
-<p>mars works!</p>
+<!-- HERO SECTION -->
+<section class="mars-section d-flex align-items-center justify-content-center pt-5 mt-5 text-white mb-0"
+         [style.backgroundImage]="'url(/img/marte.png)'"
+         style="background-size: cover; background-position: center center; background-attachment: scroll; min-height: 100vh; position: relative;">
+
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.6; z-index: 0;"></div>
+
+  <div class="container position-relative z-1 py-5 text-center text-white">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto">
+        <div class="content-text px-3 px-md-4">
+          <h1 class="display-4 fw-bold typing-effect-once text-white mb-4">
+            Mars: The <span class="redMars">Red</span> Planet
+          </h1>
+          <p class="lead fs-4 mb-4 lh-lg text-white">
+            Mars is humanity's next great frontier—a world of mystery, potential, and boundless discovery.
+          </p>
+          <p class="fs-5 mb-0 lh-lg text-white">
+            Mars awaits explorers. Are you ready?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: FACTS (Eliminados márgenes arriba y abajo) -->
+<section class="content-pair bg-dark text-white py-5 my-0">
+  <div class="container py-4">
+    <div class="row align-items-center g-4 g-md-5">
+      <div class="col-lg-6 order-lg-2">
+        <div class="content-text text-lg-start px-3 px-md-0">
+          <h2 class="h1 fw-bold mb-3 mb-md-4 text-white">Planet Facts & Characteristics</h2>
+          <p class="fs-6 mb-3 mb-md-4 lh-lg text-white opacity-75">
+            Mars is the fourth planet from the Sun, known for its distinctive
+            red color caused by iron oxide on its surface.
+          </p>
+          <ul class="list-unstyled fs-6 lh-lg text-white mb-0">
+            <li class="mb-2"><strong>Distance from Earth:</strong> 54.6 to 401 million km</li>
+            <li class="mb-2"><strong>Surface Temperature:</strong> Average -65°C</li>
+            <li class="mb-2"><strong>Atmosphere:</strong> 95% carbon dioxide</li>
+            <li class="mb-0"><strong>Moons:</strong> Phobos and Deimos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="content-image px-3 px-md-0">
+          <img src="/img/marte llegada.png" alt="Mars Characteristics"
+               class="img-fluid rounded shadow-lg content-img border border-secondary">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Aquí podrías añadir el footer si no lo tienes en app.component.html -->

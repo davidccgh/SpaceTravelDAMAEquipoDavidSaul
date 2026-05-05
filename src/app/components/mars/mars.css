@@ -1,0 +1,58 @@
+/* --- ELIMINACIÓN DE HUECOS TOTAL --- */
+:host {
+  display: block;
+  background-color: #212529; /* Color bg-dark de Bootstrap para evitar destellos blancos */
+}
+
+section, .content-pair, .mars-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 3rem; /* Ajusta el padding para separar contenido, pero no el margin */
+}
+
+/* Evita que el último elemento de cualquier sección cree un hueco */
+section *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* --- VISIBILIDAD DE TEXTO --- */
+.mars-section,
+.mars-section h1,
+.mars-section p,
+.mars-section span:not(.redMars) {
+  color: #ffffff !important;
+}
+
+.redMars {
+  color: #e16a15 !important;
+  text-shadow: 0 0 10px rgba(225, 106, 21, 0.5);
+}
+
+/* --- ESTILOS DE COMPONENTES --- */
+.typing-effect-once {
+  border-right: 3px solid #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(225, 106, 21, 0.4) !important;
+}
+
+@media (max-width: 768px) {
+  .mars-section {
+    background-attachment: scroll !important;
+  }
+  .display-4 {
+    font-size: 1.8rem !important;
+  }
+  .typing-effect-once {
+    white-space: normal;
+    border-right: none;
+  }
+}
