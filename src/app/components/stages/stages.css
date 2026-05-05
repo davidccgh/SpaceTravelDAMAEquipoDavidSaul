@@ -1,0 +1,46 @@
+/* Estilos base para todas las secciones de fondo */
+section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efecto Parallax */
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+/* Imágenes de fondo específicas usando la ruta desde public */
+#exosphere {
+  background-image: url('/img/exosfera.png');
+}
+
+#orbital {
+  background-image: url('/img/nova.png');
+}
+
+#lunar {
+  background-image: url('/img/luna.png');
+}
+
+/* Ajustes de las imágenes decorativas */
+.main-img {
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Contenedor general */
+.stages-container {
+  background-color: #212529; /* Color de respaldo oscuro */
+}
+
+/* Optimización para móviles */
+@media (max-width: 991.98px) {
+  section {
+    background-attachment: scroll; /* El efecto fixed falla en muchos móviles */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .main-img {
+    max-height: 300px;
+  }
+}
