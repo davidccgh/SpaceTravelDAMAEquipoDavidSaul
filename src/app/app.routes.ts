@@ -4,6 +4,7 @@ import { Mars } from './components/mars/mars';
 import { Stages } from './components/stages/stages';
 import { Gallery } from './components/gallery/gallery';
 import { Contact } from './components/contact/contact';
+import { Shop } from './components/shop/shop';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -11,5 +12,6 @@ export const routes: Routes = [
   { path: 'stages', component: Stages },
   { path: 'gallery', component: Gallery },
   { path: 'contact', component: Contact },
+  { path: 'shop', component: Shop },
   { path: '**', redirectTo: '' }
 ];

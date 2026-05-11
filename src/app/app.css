@@ -1,0 +1,15 @@
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+  min-height: 100vh;
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+}
+
+* {
+  margin-top: 0 !important;
+}

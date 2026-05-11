@@ -1,0 +1,52 @@
+import { Product } from '../services/store.service';
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 1,
+    name: 'Camiseta Space Hawkings Edición Limitada',
+    description: 'Camiseta premium de algodón 100% con diseño exclusivo de Space Hawkings. Perfecta para fans del espacio.',
+    price: 24.99,
+    image: '/img/camiseta-space.jpg',
+    stock: 30
+  },
+  {
+    id: 2,
+    name: 'Gorro Astronauta Ajustable',
+    description: 'Gorro de calidad con ajuste trasero. Ideal para cualquier clima. Talla única adaptable.',
+    price: 16.99,
+    image: '/img/gorro-astronauta.jpg',
+    stock: 25
+  },
+  {
+    id: 3,
+    name: 'Taza Marte 350ml',
+    description: 'Taza de cerámica de alta calidad con diseño temático de Marte. Apta para lavavajillas.',
+    price: 12.99,
+    image: '/img/taza-marte.jpg',
+    stock: 40
+  },
+  {
+    id: 4,
+    name: 'Sudadera Viajero Espacial',
+    description: 'Sudadera cómoda y cálida con estampado frontal. Material: 80% algodón, 20% poliéster.',
+    price: 34.99,
+    image: '/img/sudadera-viajero.jpg',
+    stock: 15
+  },
+  {
+    id: 5,
+    name: 'Pegatinas Espacio (Pack x10)',
+    description: 'Pack de 10 pegatinas de vinilo con diseños espaciales. Resistentes al agua.',
+    price: 8.99,
+    image: '/img/pegatinas.jpg',
+    stock: 50
+  },
+  {
+    id: 6,
+    name: 'Llavero Nave Espacial',
+    description: 'Llavero metálico en forma de nave. Pequeño, práctico y coleccionable.',
+    price: 6.99,
+    image: '/img/llavero-nave.jpg',
+    stock: 60
+  }
+];
