@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { StoreService, Product, CartItem } from '../../services/store.service';
+import { StoreService, Product, CartItem } from '../../store';
+import { ProductDetails } from '../product-details/product-details';
 
 @Component({
   selector: 'app-shop',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ProductDetails],
+  providers: [StoreService],
   templateUrl: './shop.html',
   styleUrl: './shop.css'
 })
@@ -17,6 +19,8 @@ export class Shop implements OnInit {
   cartVisible = false;
   filteredProducts: Product[] = [];
   searchTerm = '';
+  selectedProduct: Product | null = null;
+  showProductDetails = false;
 
   constructor(private storeService: StoreService) {}
 
@@ -128,5 +132,22 @@ export class Shop implements OnInit {
 
   getCartItemsCount(): number {
     return this.cartItems.reduce((total, item) => total + item.quantity, 0);
+  }
+
+  openProductDetails(product: Product): void {
+    this.selectedProduct = product;
+    this.showProductDetails = true;
+  }
+
+  closeProductDetails(): void {
+    this.showProductDetails = false;
+    this.selectedProduct = null;
+  }
+
+  onProductDetailsAddToCart(product: Product): void {
+    if (product.stock > 0) {
+      this.storeService.addToCart(product);
+      alert(`${product.name} añadido al carrito!`);
+    }
   }
 }

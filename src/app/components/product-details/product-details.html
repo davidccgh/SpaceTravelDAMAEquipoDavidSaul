@@ -1,0 +1,88 @@
+<div class="modal-backdrop" *ngIf="isVisible" (click)="onBackdropClick($event)">
+  <div class="modal-content">
+    <!-- Botón cerrar -->
+    <button class="modal-close" (click)="closeModal()">×</button>
+
+    <!-- Contenido del Modal -->
+    <div class="modal-container" *ngIf="product">
+      <!-- Imagen del Producto -->
+      <div class="modal-image">
+        <img [src]="product.image" [alt]="product.name" class="product-img" />
+      </div>
+
+      <!-- Información del Producto -->
+      <div class="modal-info">
+        <!-- Título -->
+        <h2 class="product-title">{{ product.name }}</h2>
+
+        <!-- Precio y Stock -->
+        <div class="price-stock">
+          <span class="price">${{ product.price.toFixed(2) }}</span>
+          <span class="stock" [class.low-stock]="product.stock < 10">
+            Stock: {{ product.stock }}
+          </span>
+        </div>
+
+        <!-- Descripción -->
+        <p class="description">{{ product.description }}</p>
+
+        <!-- Detalles adicionales -->
+        <div class="details-section" *ngIf="product.details">
+          <h3>Detalles del Producto</h3>
+
+          <div class="details-grid">
+            <div class="detail-item" *ngIf="product.details.material">
+              <strong>Material:</strong>
+              <span>{{ product.details.material }}</span>
+            </div>
+
+            <div class="detail-item" *ngIf="product.details.color">
+              <strong>Color:</strong>
+              <span>{{ product.details.color }}</span>
+            </div>
+
+            <div class="detail-item" *ngIf="product.details.talla">
+              <strong>Talla:</strong>
+              <span>{{ product.details.talla }}</span>
+            </div>
+
+            <div class="detail-item" *ngIf="product.details.peso">
+              <strong>Peso:</strong>
+              <span>{{ product.details.peso }}</span>
+            </div>
+
+            <div class="detail-item" *ngIf="product.details.dimensiones">
+              <strong>Dimensiones:</strong>
+              <span>{{ product.details.dimensiones }}</span>
+            </div>
+          </div>
+
+          <!-- Características -->
+          <div class="characteristics" *ngIf="product.details.caracteristicas && product.details.caracteristicas.length > 0">
+            <h4>Características:</h4>
+            <ul>
+              <li *ngFor="let caract of product.details.caracteristicas">{{ caract }}</li>
+            </ul>
+          </div>
+
+          <!-- Cuidados -->
+          <div class="care-section" *ngIf="product.details.cuidados">
+            <h4>Instrucciones de Cuidado:</h4>
+            <p>{{ product.details.cuidados }}</p>
+          </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="action-buttons">
+          <button class="btn-add-cart" (click)="onAddToCart()" [disabled]="product.stock === 0">
+            <span *ngIf="product.stock > 0">🛒 Añadir al Carrito</span>
+            <span *ngIf="product.stock === 0">Agotado</span>
+          </button>
+          <button class="btn-close" (click)="closeModal()">
+            ✕ Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

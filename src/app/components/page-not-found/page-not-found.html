@@ -1,0 +1,65 @@
+<!-- 404 Hero Section -->
+<section id="not-found"
+  class="hero-section min-vh-100 d-flex align-items-center justify-content-center text-white position-relative overflow-hidden">
+  <video autoplay muted loop playsinline class="hero-video position-absolute top-0 start-0 w-100 h-100">
+    <source src="/img/111528-690743564_medium.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark"></div>
+
+  <div class="container text-center position-relative z-1 px-4">
+    <div class="d-flex justify-content-center mb-2">
+      <p class="text-uppercase opacity-75 small">ERROR EN LA RUTA</p>
+    </div>
+
+    <div class="d-flex justify-content-center mb-4">
+      <h1 class="display-error fw-bold">404</h1>
+    </div>
+
+    <div class="d-flex justify-content-center mb-4">
+      <h2 class="display-4 fw-light">PÁGINA NO ENCONTRADA</h2>
+    </div>
+
+    <p class="lead mx-auto mb-5" style="max-width: 800px;">
+      Lo sentimos, la página que buscas no existe o ha sido movida a otro destino.
+      Parece que te has perdido en el espacio. ¿Deseas regresar?
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <button (click)="navigateHome()" class="btn btn-outline-light btn-lg px-5 py-3 text-uppercase fw-semibold">
+        <i class="bi bi-house-fill me-2"></i>IR A INICIO
+      </button>
+      <button (click)="navigateShop()" class="btn btn-light btn-lg px-5 py-3 text-uppercase fw-semibold text-dark">
+        <i class="bi bi-shop me-2"></i>IR A TIENDA
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Lost in Space Section -->
+<section class="py-5 bg-dark text-white">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        <div class="ratio ratio-16x9">
+          <img src="/img/exosfera.png" class="object-fit-cover rounded-3" alt="Lost in space">
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <h3 class="h2 fw-bold mb-3">Navegación Perdida en el Cosmos</h3>
+        <p class="opacity-75 mb-3">
+          A veces, incluso los mejores navegantes espaciales pueden perder su camino en la inmensidad del universo.
+          Si llegaste aquí, significa que buscaste una ruta que no existe en nuestro viaje.
+        </p>
+        <p class="opacity-75 mb-4">
+          Te invitamos a volver a nuestro sitio principal o explorar nuestra tienda de artículos espaciales.
+        </p>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="/" class="btn btn-outline-light text-uppercase fw-semibold">INICIO</a>
+          <a href="/shop" class="btn btn-light text-dark text-uppercase fw-semibold">SHOP</a>
+          <a href="/contact" class="btn btn-outline-light text-uppercase fw-semibold">CONTACTO</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -10,6 +10,15 @@ export interface Product {
   price: number;
   image: string;
   stock: number;
+  details?: {
+    material?: string;
+    color?: string;
+    talla?: string;
+    peso?: string;
+    dimensiones?: string;
+    caracteristicas?: string[];
+    cuidados?: string;
+  };
 }
 
 export interface CartItem {

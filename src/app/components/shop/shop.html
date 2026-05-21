@@ -104,15 +104,31 @@
           Stock: {{ product.stock }}
         </p>
 
-        <button
-          class="btn btn-primary add-to-cart-btn"
-          (click)="addToCart(product)"
-          [disabled]="product.stock === 0"
-        >
-          <span *ngIf="product.stock > 0">Añadir al Carrito</span>
-          <span *ngIf="product.stock === 0">Agotado</span>
-        </button>
+        <div class="product-actions">
+          <button
+            class="btn btn-info details-btn"
+            (click)="openProductDetails(product)"
+          >
+            👁️ Ver Detalles
+          </button>
+          <button
+            class="btn btn-primary add-to-cart-btn"
+            (click)="addToCart(product)"
+            [disabled]="product.stock === 0"
+          >
+            <span *ngIf="product.stock > 0">🛒 Añadir</span>
+            <span *ngIf="product.stock === 0">Agotado</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Modal de Detalles del Producto -->
+<app-product-details
+  [product]="selectedProduct"
+  [isVisible]="showProductDetails"
+  (close)="closeProductDetails()"
+  (addToCart)="onProductDetailsAddToCart($event)"
+></app-product-details>
