@@ -1,0 +1,157 @@
+<section class="auth-hero d-flex align-items-center justify-content-center position-relative">
+  <div class="hero-overlay-dark"></div>
+
+  <main class="pt-5 mt-5 py-5 text-light position-relative" style="z-index: 2; width: 100%;">
+    <div class="container py-4">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <div class="d-flex justify-content-center mb-2">
+            <p class="text-uppercase fs-4 text-info fw-semibold typing-effect-once">
+              {{ isLoginMode ? 'Mission Access' : 'Join the Mission' }}
+            </p>
+          </div>
+          <h2 class="h1 fw-bold mb-3">
+            {{ isLoginMode ? 'Welcome Back, Astronaut' : 'Create Your Account' }}
+          </h2>
+          <p class="text-light opacity-75">
+            {{ isLoginMode 
+              ? 'Access your Space Hawkings dashboard' 
+              : 'Start your space travel journey with us' }}
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <!-- LOGIN FORM -->
+          <div *ngIf="isLoginMode" class="card bg-dark text-light border-secondary shadow auth-card">
+            <div class="card-body p-4 p-md-5">
+              <form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+                <div class="mb-4">
+                  <label class="form-label fw-semibold">Email address</label>
+                  <input 
+                    type="email" 
+                    class="form-control bg-black text-light border-secondary form-input"
+                    placeholder="astronaut@spacehawkings.com" 
+                    [(ngModel)]="loginData.email"
+                    name="email"
+                    required>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label fw-semibold">Password</label>
+                  <input 
+                    type="password" 
+                    class="form-control bg-black text-light border-secondary form-input"
+                    placeholder="Enter your password" 
+                    [(ngModel)]="loginData.password"
+                    name="password"
+                    required>
+                </div>
+
+                <div class="d-grid mb-3">
+                  <button type="submit" class="btn btn-info btn-lg fw-bold">
+                    <i class="bi bi-rocket-takeoff me-2"></i>Launch Mission
+                  </button>
+                </div>
+
+                <div class="text-center">
+                  <p class="text-light opacity-75 mb-0">
+                    Don't have an account? 
+                    <a href="#" (click)="toggleMode(); $event.preventDefault()" class="text-info fw-semibold">Sign up</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- SIGNUP FORM -->
+          <div *ngIf="!isLoginMode" class="card bg-dark text-light border-secondary shadow auth-card">
+            <div class="card-body p-4 p-md-5">
+              <form (ngSubmit)="onSignup(signupForm)" #signupForm="ngForm">
+                <div class="mb-4">
+                  <label class="form-label fw-semibold">Full name</label>
+                  <input 
+                    type="text" 
+                    class="form-control bg-black text-light border-secondary form-input"
+                    placeholder="John Astronaut" 
+                    [(ngModel)]="signupData.name"
+                    name="name"
+                    required>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label fw-semibold">Email address</label>
+                  <input 
+                    type="email" 
+                    class="form-control bg-black text-light border-secondary form-input"
+                    placeholder="astronaut@spacehawkings.com" 
+                    [(ngModel)]="signupData.email"
+                    name="email"
+                    required>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label fw-semibold">Password</label>
+                  <input 
+                    type="password" 
+                    class="form-control bg-black text-light border-secondary form-input"
+                    placeholder="Create a strong password" 
+                    [(ngModel)]="signupData.password"
+                    name="password"
+                    required>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label fw-semibold">Confirm password</label>
+                  <input 
+                    type="password" 
+                    class="form-control bg-black text-light border-secondary form-input"
+                    placeholder="Confirm your password" 
+                    [(ngModel)]="signupData.confirmPassword"
+                    name="confirmPassword"
+                    required>
+                </div>
+
+                <div class="d-grid mb-3">
+                  <button type="submit" class="btn btn-info btn-lg fw-bold">
+                    <i class="bi bi-star me-2"></i>Join the Mission
+                  </button>
+                </div>
+
+                <div class="text-center">
+                  <p class="text-light opacity-75 mb-0">
+                    Already have an account? 
+                    <a href="#" (click)="toggleMode(); $event.preventDefault()" class="text-info fw-semibold">Log in</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Info Section -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="feature-box text-center">
+                <i class="bi bi-shield-lock fs-1 text-info mb-2"></i>
+                <h5 class="fw-bold">Secure Access</h5>
+                <p class="text-light opacity-75 small">Your data is protected with advanced encryption</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-box text-center">
+                <i class="bi bi-rocket fs-1 text-info mb-2"></i>
+                <h5 class="fw-bold">Explore More</h5>
+                <p class="text-light opacity-75 small">Access exclusive content and mission plans</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>

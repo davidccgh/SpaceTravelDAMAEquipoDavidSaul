@@ -1,0 +1,163 @@
+/* Configuración del fondo Hero */
+.auth-hero {
+  background-image: url('/img/astronauta.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Capa oscura para que el formulario resalte */
+.hero-overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Estilos para la tarjeta de autenticación */
+.auth-card {
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease;
+}
+
+.auth-card:hover {
+  border-color: #0dcaf0 !important;
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.3) !important;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para inputs */
+.form-input {
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Estilos para los botones */
+.btn-info {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.btn-info:hover {
+  background-color: #0bb5d4;
+  border-color: #0bb5d4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(13, 202, 240, 0.3);
+}
+
+/* Feature boxes */
+.feature-box {
+  padding: 2rem 1rem;
+  border: 1px solid rgba(13, 202, 240, 0.3);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.feature-box:hover {
+  border-color: #0dcaf0;
+  transform: translateY(-5px);
+  background: rgba(13, 202, 240, 0.1);
+}
+
+.feature-box i {
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Efecto de escritura */
+.typing-effect-once {
+  display: inline-block;
+  font-family: inherit;
+  border-right: 3px solid currentColor;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30) forwards, blink 0.7s step-end 4, hideCursor 0s 2.5s forwards;
+  width: fit-content;
+}
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    border-color: currentColor;
+  }
+  51%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes hideCursor {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-card {
+    margin: 1rem 0;
+  }
+
+  .feature-box {
+    margin-bottom: 1rem;
+  }
+
+  .btn-info {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
+}
